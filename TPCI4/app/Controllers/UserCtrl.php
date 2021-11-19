@@ -8,8 +8,16 @@ use App\Models\ServiceModel;
 
 class UserCtrl extends BaseController
 {
+    //  Constructeur pour appeler fonction helper "html"
+    public function __construct(){
+        helper('html');
+    }
+
     public function index()
     {
+        //  Title de ma page index.php
+        $data['title'] = 'Users List';
+
         //  Chargement du helper "CalcAge" 
         helper('CalcAge');
 
@@ -18,7 +26,10 @@ class UserCtrl extends BaseController
         return view('index', $data);
     }
 
-    public function form(){ 
+    public function signup(){ 
+
+        //  Title de ma page signup.php
+        $data['title'] = 'User register';
 
         //  Chargement du helper "form"
         helper(['form', 'url']);
@@ -36,6 +47,10 @@ class UserCtrl extends BaseController
             'phone' => 'required|numeric|max_length[10]',
             'service' => 'required'
         ]);
+
+        $UserModel = new UserModel();
+
+    if (!$validation) {}
 
         return view('signup', $data);
     }

@@ -1,0 +1,42 @@
+/***************************/
+/***** index.php style ****/
+/*************************/
+
+/** BOUTON REDIRECTION **/
+
+.pNotStillRec{
+    font-size: 1.3rem;
+}
+
+.redirectLink{
+    background-color: #198754;
+    border: 1px solid #198754;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.25rem;
+    padding: 6px 12px;
+    text-decoration: none;
+}
+
+.redirectLink:hover{
+    color: #ffc107;
+}
+
+
+/***************************/
+/**** signup.php style ****/
+/*************************/
+
+/** FORM **/
+
+.label{
+    font-weight: bold;
+}
+
+.btn{
+    font-size: 1.25rem;
+}
+
+.btn:hover{
+    color: #ffc107;
+}
